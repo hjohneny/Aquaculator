@@ -33,12 +33,12 @@ $ pip install requirements.txt
 
 shell script below. copy paste and save as .bat extension
 -------------------------------------------------
-@echo on
-
-%Disk%:
-cd %AquaculatorDirectory%
-start http://localhost:5000/
-python app.py
-
-cmd /k
+@echo on  
+  
+%Disk%:  
+cd %AquaculatorDirectory%  
+start http://localhost:5000/  
+python app.py  
+  
+cmd /k  
 
