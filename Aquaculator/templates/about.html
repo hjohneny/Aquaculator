@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block body %}
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+
+    <div class="container">
+      <div class="col-lg-6 order-1 order-lg-2 hero-img">
+        <img src="{{ url_for('static', filename= 'assets/img/hero-img2.png') }}" class="img-fluid" alt="">
+      </div>
+      <div class="row">
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1>About</h1>
+          <h2>Aquaculator is a python web application that leverages data analytics and machine learning to model predictions to calculate market trends or forecast profitability.</h2>
+          <div><a href="#services" class="btn-get-started scrollto">More</a></div>
+        </div>
+        <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+          <h1></h1>
+          <h2>A Final Year Project developed by Hendrix Travers Aloi. email <a href = "mailto: hjohneny99@gmail.com">hjohneny99@gmail.com</a> for more inquiries.</h2>
+        </div>
+      </div>
+    </div>
+
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-graph-up" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="/tilapia_price">Tilapia Market Trend Prediction</a></h4>
+              <p class="description"><b>ML Algorithm:</b> XGBoost Regressor <br><b>Accuracy Score:</b> 74% (0.7411) <br><b>Dataset:</b> <a href="https://www.tridge.com/data-insights/market-price-tilapia-china" target="_blank">Tilapia Market Trend Data</a> </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-calculator-fill" style="color: #282c27;"></i></div>
+              <h4 class="title"><a href="/yield_cal">CBA and Yield Calculator</a></h4>
+              <p class="description"><b>ML Algorithm:</b> Decision Tree Regressor <br><b>Accuracy Score:</b> 85% (0.8535) <br><b>Dataset:</b> <a href="https://thegrowingleaf.com/how-much-do-aquaponics-systems-cost-full-breakdown/" target="_blank">Aquaponics Cost</a> </p>
+            </div>
+          </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>By Hendrix Travers</h2>
+        </div>
+
+        
+
+      </div>
+    </section><!-- End Team Section -->
+
+    {% endblock %}

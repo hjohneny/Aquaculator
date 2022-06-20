@@ -1,0 +1,113 @@
+{% extends "layout.html" %}
+{% block body %}
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Yield Calculator</h2>
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li>Yield Calculator</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    
+      <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-title" style="padding-bottom: 0px;">
+                <h2>Yield of Aquaponics System</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8 mt-5 mt-lg-0">
+                    <form action="/predict_yield" method="post" class="php-email-form">
+                        <div class="row">
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <select name="Type" id="Type" class= "form-select" required>
+                                    <option selected>Type</option>
+                                    <option value="Home">Home</option>
+                                    <option value="Commercial">Commercial</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="text" class="form-control" name="Initial_Cost" id="Initial_Cost" placeholder="Initial Cost" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="text" class="form-control" name="Maintenance_Cost" id="Maintenance_Cost" placeholder="Maintenance Cost" required>
+                            </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                              <input type="text" class="form-control" name="Duration_Months" id="Duration_Months" placeholder="Aquaponic Farm Duration" required>
+                          </div>
+                        <div class="row">
+                          <div class="col-md-4 form-group mt-3 mt-md-0">
+                          </div>
+                            <div class="col-md-6 form-group mt-3 mt-md-0">
+                                <input type="text" class="form-control" name="Tank_L" id="Tank_L" placeholder="Tank Capacity (L)" required>
+                            </div>
+                            <div class="col-md-4 form-group mt-3 mt-md-0">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 form-group mt-3 mt-md-0">
+                            </div>
+                        </div>
+                        
+                        <div class="text-center"><button type="submit" id="sub">Calculate Yield</button></div>
+                        {% if prediction %}
+                        <div class="row" style="padding-top: 25px;">
+                          <div class="col-md-12 ">
+                            <div class="alert alert-success" role="alert">
+                              {{ prediction }}
+                            </div>
+                          </div>
+                        </div>
+                        {% endif %}
+                    </form>
+                </div>
+            </div>
+  
+        </div>
+      </section><!-- End Contact Section -->
+
+    
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-graph-up" style="color: #ff689b;"></i></div>
+              <h4 class="title"><a href="/tilapia_price">Tilapia Market Trend Prediction</a></h4>
+              <p class="description"><b>ML Algorithm:</b> XGBoost Regressor <br><b>Accuracy Score:</b> 74% (0.7411) <br><b>Dataset:</b> <a href="https://www.tridge.com/data-insights/market-price-tilapia-china" target="_blank">Tilapia Market Trend Data</a> </p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6" data-wow-delay="0.2s">
+            <div class="icon-box">
+              <div class="icon"><i class="bi bi-calculator-fill" style="color: #282c27;"></i></div>
+              <h4 class="title"><a href="/yield_cal">CBA and Yield Calculator</a></h4>
+              <p class="description"><b>ML Algorithm:</b> Decision Tree Regressor <br><b>Accuracy Score:</b> 85% (0.8535) <br><b>Dataset:</b> <a href="https://thegrowingleaf.com/how-much-do-aquaponics-systems-cost-full-breakdown/" target="_blank">Aquaponics Cost</a> </p>
+            </div>
+          </div>
+      </div>
+    </section><!-- End Services Section -->
+
+  </main><!-- End #main -->
+
+  
+  {% endblock %}
