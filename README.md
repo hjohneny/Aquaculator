@@ -1,4 +1,4 @@
-Hendrix Travers Aloi
+Hendrix
 hjohneny99@gmail.com
 
 Instructions
